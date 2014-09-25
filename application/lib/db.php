@@ -1,19 +1,32 @@
 <?php
 
+require dirname(__FILE__) . '/config/db.php';
+
+/**
+ * Database Class
+ */
 class DB extends PDO {
 	
-	private static $_host		= 'localhost';
+	private static $_host		= DB_HOST;
 	
-	private static $_user		= 'root';
+	private static $_user		= DB_USER;
 	
-	private static $_pass		= '';
+	private static $_pass		= DB_PASS;
 	
-	private static $_dbname		= 'cities';
+	private static $_dbname		= DB_NAME;
 	
+    /**
+     * Instance for static call (singleton)
+     * 
+     * @var type 
+     */
 	private static $_instance	= null;
 	
-	protected $db				= null;
-	
+    /**
+     * Errors array
+     * 
+     * @var type 
+     */
 	protected $errors			= array();
 	
 	/**
