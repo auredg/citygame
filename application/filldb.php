@@ -1,6 +1,6 @@
 <?php
 
-require 'db.php';
+require dirname(__FILE__) . '/lib/db.php';
 
 $cities = DB::fetchAll('SELECT * FROM cities WHERE lat IS NULL');
 

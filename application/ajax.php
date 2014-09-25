@@ -1,7 +1,7 @@
 <?php
 
-require 'db.php';
-require 'jsoncontroller.php';
+require dirname(__FILE__) . '/lib/db.php';
+require dirname(__FILE__) . '/lib/jsoncontroller.php';
 
 class AjaxController extends JSONController {
 	

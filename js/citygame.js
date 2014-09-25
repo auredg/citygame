@@ -41,7 +41,7 @@ CityGame.prototype = {
 		var that = this;
 		
 		$.ajax({
-			url: 'ajax.php?action=getnextcity',
+			url: 'application/ajax.php?action=getnextcity',
 			method: 'post',
 			data: { 
 				exclude: that.citysaved
