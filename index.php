@@ -3,6 +3,7 @@
 <head>
 	<title>Simple Map</title>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="js/googlemap-styles.js"></script>
 	<script src="js/jquery-2.1.1.js"></script>
@@ -25,15 +26,6 @@
 		
 		google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
-	<style>
-		#map-canvas {
-			width: 400px;
-			height: 500px;
-		}
-		.float {
-			
-		}
-	</style>
 </head>
 <body>
 	<div class="float">

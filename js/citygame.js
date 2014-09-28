@@ -20,7 +20,7 @@ CityGame.prototype = {
 		var that = this;
 		
 		this.prepareCity(function() {
-			alert('Indiquer la position de ' + that.city.name + ' sur la carte de France');
+            $('#city-name').text('Indiquer la position de ' + that.city.name + ' sur la carte de France');
 			that.initTimer();
 			that.initMapEvent();
 		});
@@ -68,7 +68,8 @@ CityGame.prototype = {
 			});
 			var distance = computeDistance(e.latLng.lat(), e.latLng.lng(), that.city.lat, that.city.lng);
 			var points = that.computePoints(distance);
-			console.log(distance.toFixed(3) + ' km, ' + points + ' points en ' + that.timer.toFixed(1) + ' secondes');
+            that.score+= points;
+            $('#score').html(distance.toFixed(3) + ' km, ' + points + ' points en ' + that.timer.toFixed(1) + ' secondes <br /> Score : <b>' + that.score + '</b>');
 			that.cancelRound();
 		});
 	},
